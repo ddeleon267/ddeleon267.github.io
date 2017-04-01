@@ -1,0 +1,21 @@
+# Site settings
+title: Dominique De Leon
+header-img: img/home-bg.png
+email: dominique.a.deleon@gmail.com
+copyright_name: ddeleon267
+description: > # this means to ignore newlines until "baseurl:"
+  Learning to Code
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  ddeleon267
+learn_profile: ddeleon267
+email_username: dominique.a.deleon@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]

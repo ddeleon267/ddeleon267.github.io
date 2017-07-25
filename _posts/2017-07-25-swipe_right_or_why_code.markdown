@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "**Swipe Right? (Or: Why Code?)**"
-date:   2017-07-25 22:13:38 +0000
+title:  "Swipe Right? (Or: Why Code?)"
+date:   2017-07-25 18:13:39 -0400
 ---
 
 

@@ -6,8 +6,6 @@ permalink:  cli_gem_project_initial_thoughts
 ---
 
 
-CLI GEM Project: Execution
-
 How do you create something out of nothing? And where do you start?
 
 I don't know that I consider myself much of a creative type, at least not more so than the average person . When I was younger I had my fair share of experiences flexing that particular muscle-- painting, writing, building. But I don't find myself bursting with “big” ideas too often, and I tend to give myself a hard time about it.

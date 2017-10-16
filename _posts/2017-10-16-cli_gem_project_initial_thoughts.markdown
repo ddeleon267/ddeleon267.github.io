@@ -27,13 +27,13 @@ Which leads to to my first project, the Ruby Gem CLI Project.
 
 Coming up with the idea was the simplest “hard” thing to get over.  The thought process is something like:
 1. No ideas 
-<br>![](http://media1.picsearch.com/is?HuUbNlGRJzgEVok1Bzhnkjvn9wFoR90gclcAO5m5Kj8&height=339)</br>
+<br>![](http://media1.picsearch.com/is?HuUbNlGRJzgEVok1Bzhnkjvn9wFoR90gclcAO5m5Kj8&height=339)
 2. Briefly berate myself for not having a list of brilliant ideas immediately
-<br>![](http://media3.picsearch.com/is?D2rK2O-KRIxqPRSKVgN3D7KkH8Ptcc0pz_yG3M1ZJtE&height=272)</br>
+<br>![](http://media3.picsearch.com/is?D2rK2O-KRIxqPRSKVgN3D7KkH8Ptcc0pz_yG3M1ZJtE&height=272)
 3. Well, this isn't helpful. Gotta start somehwere. What can I not do? (There were a few ideas we were explicitly told not to use, so those were out)
-<br>![](http://media2.picsearch.com/is?9OcOvpWqgf1XxbkmpROcwwb4xgJu4on-D96oEplG0XM&height=327)</br>
+<br>![](http://media2.picsearch.com/is?9OcOvpWqgf1XxbkmpROcwwb4xgJu4on-D96oEplG0XM&height=327)
 4. Alright, we've narrowed down the options, slightly. Let's take it a step further. What is something that would interest me? Something I find interesting would (in theory) keep me going as I struggled through the hard stuff. 
-<br>![](http://media4.picsearch.com/is?cgvWS4A7UJ-IqivH3Xm3XNcmqY7PjikYXj-X4YXQDWI&height=266)</br>
+<br>![](http://media4.picsearch.com/is?cgvWS4A7UJ-IqivH3Xm3XNcmqY7PjikYXj-X4YXQDWI&height=266)
 
 Well, what are my interests? The internet, makeup, youtube, craft beer, powerlifting. I'm not immediately inspired by anything, and all of this pondering is a little stressful, so a beer sounds pretty good right about now :)
 

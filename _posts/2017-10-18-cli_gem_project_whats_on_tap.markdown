@@ -17,7 +17,8 @@ If you’ve read my previous blog post on my CLI Gem project, WhatsOnTap, you ha
 Also worth noting that this blog post is more of a beakdown of my code and what it's doing. My [last post](http://ddeleon.com/cli_gem_project_initial_thoughts) is more of a reflection piece (initial thoughts, how I got started), and my [next blog post](http://ddeleon.com/cli_gem_project_final_thoughts) will be as well (final thoughts, areas for improvement, etc.)
 
 Let's dive in.
-# WhatsOnTap
+
+#WhatsOnTap
 
 While most of the magic happens in the CLI and Scraper classes, lets talk briefly about the two objects that play a major role in this gem: locations and beers. After all, the whole point of this gem is to give the user data about specific beers and where to find them!
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CLI Gem Project: Final Thoughts"
-date:       2017-10-19 18:21:02 +0000
+date:       2017-10-19 14:21:03 -0400
 permalink:  cli_gem_project_final_thoughts
 ---
 
@@ -10,7 +10,7 @@ It's a bit excessive to have three blog posts on the same project, but I have a 
 
 It contains multitides.
 
-If you are looking for more of a technical description of what my project does, I would encourage you to visit my last blog post, where you'll also find links to the git repo for the gem and a brief video that gives a demo from the user's perspective. If you're more interested in my initial thoughts/reflection on the project, the beginning stages of planning, etc., I would direct you to the post I wrote immediately before that one. 
+If you are looking for more of a technical description of what my project does, I would encourage you to visit [my last blog post](http://ddeleon.com/cli_gem_project_whats_on_tap), where you'll also find links to the git repo for the gem and a brief video that gives a demo from the user's perspective. If you're more interested in my initial thoughts/reflection on the project, the beginning stages of planning, etc., I would direct you to the [post](http://ddeleon.com/cli_gem_project_initial_thoughts) I wrote immediately before that one. 
 
 This post will likely be simiar in tone to the latter, which is how I prefer to write. 
 

@@ -17,13 +17,13 @@ If you’ve read my previous blog post on my CLI Gem project, WhatsOnTap, you ha
 Also worth noting that this blog post is more of a beakdown of my code and what it's doing. My [last post](http://ddeleon.com/cli_gem_project_initial_thoughts) is more of a reflection piece (initial thoughts, how I got started), and my [next blog post](http://ddeleon.com/cli_gem_project_final_thoughts) will be as well (final thoughts, areas for improvement, etc.)
 
 Let's dive in.
-## WhatsOnTap
+# WhatsOnTap
 
 While most of the magic happens in the CLI and Scraper classes, lets talk briefly about the two objects that play a major role in this gem: locations and beers. After all, the whole point of this gem is to give the user data about specific beers and where to find them!
 
 <br>![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1rM4o-gZtbT-5XejMiUi9bHLGlnfe2Na0QHlOgV4JR9ZPdRE)
 
-### Location.rb and Beer.rb
+## Location.rb and Beer.rb
 The only significant differences between the two classes are their attributes.
 
 **Location.rb**
@@ -56,7 +56,7 @@ I will say that while there is obvious repetition here, it is minor enough for m
 
 Let’s move on to the code that’s doing all the heavy lifting. 
 
-## Cli.rb
+# Cli.rb
 **#call**
 
 The call method controls the flow of the CLI, and I wanted to be very descriptive of what was happening:

@@ -14,7 +14,7 @@ If you are looking for more of a technical description of what my project does, 
 
 This post will likely be simiar in tone to the latter, which is how I prefer to write. 
 
-## Process: What I Have Learned
+# Process: What I Have Learned
 
 **The most significant skill that I have taken away from this endeavor is learning how to debug with pry.** 
 
@@ -49,7 +49,7 @@ On a technical note, I have also learned a few things in the process of creathin
 
 I built a gem, but I built some concrete skills as well :)
 
-## Project: Future Considerations
+# Project: Future Considerations
 While I am proud of the gem I have created and I stand by my work, there are a few things that I wish had turned out differently and would love to come back and tweak in the future. I will focus on main concerns rather than little nitpicky things:
 
 * My initial goal was to create a gem that takes in a user's zip code (not city) and displays results based on which locations are *closest*, giving data about how far each location is from the user. For the sake of making the completion of this project manageable and not totally overwhelming, I was encouraged to use the city input instead. As a result, the current gem is missing that additional data (how far away the location is) and these is no obvious hierarchy to the results that are listed. As a user, it is infinitely less useful for me to have a list of any 5 locations that happen to be in my city.
@@ -60,7 +60,7 @@ While I am proud of the gem I have created and I stand by my work, there are a f
 
 * My code has some "back up plans" to avoid breaking things whenever possible when things do not go as planned (e.g. telling the user there is no data to display). While the majority of my testing / debugging shows that things DO go as planned, I am seeing these "back ups" way more often than I should be, which tells me that I need to be more particular in how I am scraping. It's not a deal-breaker -- but I am not totally satsfied, either. 
 
-## Postscript: Onward and Upward
+# Postscript: Onward and Upward
 
 
 Once I really gained momentum on the project, things begain to feel good.  The initial steps -- building a file structure with the correct dependencies, scraping successfully, instantiating real objects from what has been scraped -- were daunting and uncertain. I questioned my life choices more than I'd care to admit. 

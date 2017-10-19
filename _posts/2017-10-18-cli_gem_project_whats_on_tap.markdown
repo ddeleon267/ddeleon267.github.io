@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CLI Gem Project: Whats On Tap!"
-date:       2017-10-19 01:21:51 +0000
+date:       2017-10-18 21:21:52 -0400
 permalink:  cli_gem_project_whats_on_tap
 ---
 
@@ -12,9 +12,9 @@ As I approach the end of my CLI Gem project I feel relieved, excited, and ready 
 
 **WARNING:** This is going to be long. I would encourage you to grab some tea or coffee before you begin, or perhaps run as fast as you can in the opposite direction. 
 
-If you’ve read my previous blog post on my CLI Gem project, WhatsOnTap, you have a sense of what its objective is. If not, you can watch a brief video overview of my gem **here**. You’re also welcome to look at my code [in its entirety](https://github.com/ddeleon267/ddeleon-cli-app). 
+If you’ve read my previous blog post on my CLI Gem project, WhatsOnTap, you have a sense of what its objective is. If not, you can watch a brief video overview of my gem **[here](https://www.youtube.com/watch?v=uXCTd8gPlBw&feature=youtu.be)**. You’re also welcome to look at my code [in its entirety](https://github.com/ddeleon267/ddeleon-cli-app). 
 
-Also worth noting that this blog post is more of a beakdown of my code and what it's doing. My last post is more of a reflection piece (initial thoughts, how I got started started), and my next blog post will be as well (final thoughts, areas for improvement, etc.)
+Also worth noting that this blog post is more of a beakdown of my code and what it's doing. My [last post](http://ddeleon.com/cli_gem_project_initial_thoughts) is more of a reflection piece (initial thoughts, how I got started), and my [next blog post](http://ddeleon.com/cli_gem_project_final_thoughts) will be as well (final thoughts, areas for improvement, etc.)
 
 Let's dive in.
 ## WhatsOnTap

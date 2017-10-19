@@ -18,13 +18,13 @@ Also worth noting that this blog post is more of a beakdown of my code and what 
 
 Let's dive in.
 
-#WhatsOnTap
+**WhatsOnTap**
 
 While most of the magic happens in the CLI and Scraper classes, lets talk briefly about the two objects that play a major role in this gem: locations and beers. After all, the whole point of this gem is to give the user data about specific beers and where to find them!
 
 <br>![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1rM4o-gZtbT-5XejMiUi9bHLGlnfe2Na0QHlOgV4JR9ZPdRE)
 
-## Location.rb and Beer.rb
+**Location.rb and Beer.rb**
 The only significant differences between the two classes are their attributes.
 
 **Location.rb**
@@ -57,7 +57,7 @@ I will say that while there is obvious repetition here, it is minor enough for m
 
 Let’s move on to the code that’s doing all the heavy lifting. 
 
-# Cli.rb
+**Cli.rb**
 **#call**
 
 The call method controls the flow of the CLI, and I wanted to be very descriptive of what was happening:
@@ -302,7 +302,7 @@ def restart_from_location_list
 ```
 
 
-## Scraper.rb
+**Scraper.rb**
 
 Let's move on to the scraper class. 
 
@@ -311,7 +311,7 @@ Let's move on to the scraper class.
 
 The scraper class does most of the heavy lifting for this gem, as it should.
 
-**::get_beer_menu_site **
+**::get_beer_menu_site**
 ```
 def self.get_beer_menu_site(city)
     encoded_city = URI::encode(city)
@@ -359,7 +359,7 @@ def self.scrape_location_names
   end
 ```
 
-** ::get_beer_list_page (and helper methods) **
+**::get_beer_list_page (and helper methods)**
 
 This class method is similar to ::get_beer_menu_site, although its behavior is modified based on an integer input from the user, rather than a city, and that integer corresponds to the location the user has chosen. Nokogiri and open-uri are used again to access the page, which shows the beer list for that particular location. To modify the BeerMenus cite appropriately, I call the helper method ::scrape_location_urls. This method scrapes for url data for each location and stores these as an array of strings, similar to the scraping methods mentioned earlier. Since this method returns an array, I use the user’s input (location_number) to access only the url data that corresponds to his/her chosen location in order to modify the url appropriately. I also chose to build a class reader for the class variable @@beer_list_page. 
 
@@ -378,7 +378,7 @@ def self.get_beer_list_page(location_number)
   end
 ```
 
-** ::make_beers (and helper method ::scrape_beer_names **
+**::make_beers (and helper method ::scrape_beer_names**
 
 This method is similar  to ::make_locations, but its job is to create beer objects.
 
@@ -397,7 +397,7 @@ def self.make_beers
 
 This method first clears the list of beer objects to prevent duplicates and any other funny business. It then calls ::scrape_beer_names, which will scrape the beer list for a given location, storing this data as an array of beer names. It then iterates over this array, using the name of each beer to instantiate a new beer object, provided that a valid name is returned. No other attributes are added yet — more on that later. 
 
-** ::self.get_beer_info_page (with helper methods) **
+**::self.get_beer_info_page (with helper methods)**
 
 Similar to ::get_beer_list_page, this method modifies the url argument for Nokogiri / open-uri based on an integer input from the user, although in this case that integer corresponds to a chosen beer rather than a chosen location. The helper method #scrape_beer_urls scrapes for url data for each beer listed and stores these as an array of strings. The user’s input is used to access only the url data that corresponds to his/her chosen beer in order to modify the url appropriately. There is a class variable reader for this data as well.
 
@@ -416,7 +416,7 @@ def self.get_beer_info_page(beer_number)
   end
 ```
 
-** ::get_and_set_beer_attributes and ::scrape_individual_beer_data** 
+**::get_and_set_beer_attributes and ::scrape_individual_beer_data**
 
 Let’s talk about ::scrape_individual_beer_data first, even though it is really a helper method for ::get_and_set_beer_attributes. 
 

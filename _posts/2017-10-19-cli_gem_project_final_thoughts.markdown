@@ -49,7 +49,7 @@ On a technical note, I have also learned a few things in the process of creathin
 
 I built a gem, but I built some concrete skills as well :)
 
-** Project: Future Considerations**
+**Project: Future Considerations**
 
 While I am proud of the gem I have created and I stand by my work, there are a few things that I wish had turned out differently and would love to come back and tweak in the future. I will focus on main concerns rather than little nitpicky things:
 

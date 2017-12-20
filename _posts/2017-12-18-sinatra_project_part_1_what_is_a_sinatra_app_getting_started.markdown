@@ -21,9 +21,13 @@ This is my second major portfolio project, and the requirements are pretty simpl
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
+![](http://budiirawan.com/wp-content/uploads/2015/06/sinatra-logo.png)
+
 **Sinatra**
 
-Sinatra is a lightweight Ruby framework (compared to the big guns you get with Rails) that is used to make dynamic web applications. The Sinatra community seems fun and sassy as well, and the [documentation](http://sinatrarb.com/documentation.html) is easy to read and digest (compared to, ahem, Rails documentation). 
+[Sinatra is a lightweight, Rack-based Ruby framework](https://learn.co/tracks/full-stack-web-development-v3/sinatra/sinatra-basics/what-is-sinatra) that is used to make dynamic web applications. When I say lightweight, that's compared to the big guns you get with Ruby on Rails. Rails is powerful and gives you everything you need to build an application "from front to back." That being said, it adds a lot of bulk and can be hard to debug if you're not sure what you're dealing with. Sinatra gives you the bare minimum, so while you won't necessarily have your app up and running right away, you have fewer moving parts to worry about if something goes wrong. You also have to set up much of your app manually, which is great practice for a beginner!
+
+ The Sinatra community seems fun and sassy as well, and the [documentation](http://sinatrarb.com/documentation.html) is easy to read and digest (compared to, ahem, Rails documentation). 
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
@@ -51,6 +55,7 @@ CRUD refers to the basic functionality of any program that creates and persists 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
 **Associations**
+
 There is a lot that can be said of ActiveRecord associations, but ultimately they just provide functionality (i.e. methods) to your models in a way that attempts to mirror their relationships in real life. Yay for metaphors in programming! 
 
 These relationships include (but are not limited to!) belongs_to, has_one, has_many, and has_many, :through. You can read about these and other associations [here](http://guides.rubyonrails.org/association_basics.html). 
@@ -84,7 +89,7 @@ That’s what apps are for, anyway, and a prospective employer should be able to
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
-**My app: RoutineAddict!**
+**My App: RoutineAddict!**
 
 **The Idea**
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "My Sinatra App Part II: Routine Addict"
-date:       2017-12-20 15:58:52 +0000
+title:      "Sinatra Project Part II: Routine Addict"
+date:       2017-12-20 10:58:53 -0500
 permalink:  my_sinatra_app_part_ii_routine_addict
 ---
 
@@ -40,7 +40,7 @@ A product has a *name* and a *category* (e.g. cleanser, moisturizer, sunscreen).
 
 #### Routine_products + a Word on Associations
 
-It is worth noting that this project only required very simple model associations (at least one has_many). It is also worth noting that I ignored that advice multiple times, both in my initial planning of my project as well as when I asked around for advice on Slack.  You see, I am stubborn, and I want what I want, and I was dead-set on a has_many_through relationship among some of my models. I considered the following two options:
+It is worth noting that this project only required very simple model associations (at least one has_many). It is also worth noting that I ignored that advice multiple times, both in my initial planning of my project as well as when I asked around for advice on Slack.&#x2028;&#x2028;You see, I am stubborn, and I want what I want, and I was dead-set on a has_many_through relationship among some of my models. I considered the following two options:
 
 Simpler (lol of course this is not the one I chose)
 * **user has_many :routines**

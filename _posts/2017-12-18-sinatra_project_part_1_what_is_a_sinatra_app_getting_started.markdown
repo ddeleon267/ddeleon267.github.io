@@ -43,14 +43,14 @@ MVC, or [Model-View-Controller](https://learn.co/tracks/full-stack-web-developme
 
 **CRUD functionality**
 
-CRUD refers to the basic functionality of any program that creates and persists data
+[CRUD](https://learn.co/tracks/full-stack-web-development-v3/sinatra/activerecord/activerecord-in-sinatra) refers to the basic functionality of any program that creates and persists data
 
 **Create** —> instantiate model instances <br>
 **Read** —> Retrieve data from your saved model instances. This could be a particular instance or all instances of the same model. <br>
 **Update** —> Edit a given model instance and persist those changes <br>
-**Delete** —> Delete (also referred to as ‘destroy’! Which is much more intense) an individual instance of your model from the database
+**Delete** —> Delete (also referred to as ‘destroy.’ Which is much more intense!) an individual instance of your model from the database
 
-**N.B.** The language here can get a little confusing, so it is easier for me to speak in term of Ruby models and instances. However, it is worth noting that you are not saving actual Ruby instances to your database, but rather that …..(need to add to this; my apologies)
+**N.B.** The language here can get a little confusing, so it is easier for me to speak in term of Ruby models and instances. However, it is worth noting that you are not saving actual Ruby instances to your database, but rather that you have [*wrapped* your database with an ORM like ActiveRecord](https://learn.co/tracks/full-stack-web-development-v3/orms-and-activerecord/orms/why-an-orm-is-useful) such that your Ruby models *correspond* to tables in your database and instances of those models *correspond* to individual entries (i.e. rows) in that database. By doing this, you can happily code in Ruby while ActiveRecord handles the SQL required to modify and retrieve data from your database. 
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 

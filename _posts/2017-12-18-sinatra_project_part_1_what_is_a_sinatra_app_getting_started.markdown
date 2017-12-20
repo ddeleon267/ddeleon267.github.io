@@ -19,7 +19,7 @@ This is my second major portfolio project, and the requirements are pretty simpl
 * Have user accounts with validations for signup
 * Include safety features, such as validations, that keep users who aren’t you from editing your content!
 
-## Sinatra
+**Sinatra**
 
 Sinatra is a lightweight Ruby framework (compared to the big guns you get with Rails) that is used to make dynamic web applications. The Sinatra community seems fun and sassy as well, and the [documentation](http://sinatrarb.com/documentation.html) is easy to read and digest (compared to, ahem, Rails documentation). 
 

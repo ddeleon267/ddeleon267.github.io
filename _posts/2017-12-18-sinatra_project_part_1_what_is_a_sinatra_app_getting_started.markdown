@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Project Part 1: What is a Sinatra App? + Getting Started"
-date:       2017-12-18 19:32:03 +0000
+date:       2017-12-18 14:32:04 -0500
 permalink:  sinatra_project_part_1_what_is_a_sinatra_app_getting_started
 ---
 
@@ -9,7 +9,7 @@ permalink:  sinatra_project_part_1_what_is_a_sinatra_app_getting_started
 
 
 ## Intro 
-This is intended to be a brief introduction to my Sinatra App with a little background for those who are unfamilliar with or new to Sinatra applications. 
+This is intended to be a brief introduction to my Sinatra App with a little background for those who are unfamilliar with or new to Sinatra applications
 
 This is my second major portfolio project, and the requirements are pretty simple. The app must:
 
@@ -59,7 +59,7 @@ Naturally, I spent too much time fussing over what option I should choose, and I
 
 I still wasn’t sure what I wanted to do, though. My thought process was something like this:
 
-**Me:** I should just do something simple, like a to-do list. People joke about this being [overdone](https://medium.freecodecamp.org/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d), but there is something to be said about not reinventing the wheel, especially as a beginner. Being basic means you learn to master the basics.  
+**Me:** I should just do something simple, like a to-do list. People joke about this being [overdone](https://medium.freecodecamp.org/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d), but there is something to be said about not reinventing the wheel, especially as a beginner. Being basic means you learn to master the basics.&#x2028;&#x2028;
 
 ***Also me:***  But… someone will see this someday! Maybe I don’t want it to be basic. 
 
@@ -69,7 +69,7 @@ I still wasn’t sure what I wanted to do, though. My thought process was someth
 
 Ultimately, I decided that I would build something that interested me but that also targeted a group of customers/consumers and would fill a perceived need. 
 
-That’s what apps are for, anyway, and a prospective employer should be able to appreciate that regardless of content. It's great to practice your skills, but you can do that in a myriad of ways, and someone's gotta want what you're selling. Plus, picking a topic that interests me keeps me motivated, and I won’t always have that much control over what I build.  
+That’s what apps are for, anyway, and a prospective employer should be able to appreciate that regardless of content. It's great to practice your skills, but you can do that in a myriad of ways, and someone's gotta want what you're selling. Plus, picking a topic that interests me keeps me motivated, and I won’t always have that much control over what I build.&#x2028;&#x2028;
 
 ### My app: RoutineAddict!
 
@@ -85,6 +85,6 @@ While thinking about my app, I considered that the subreddit doesn’t have a ve
 3. After getting the basic structure of my project set up, adding views, controllers, models, and migrations was pretty easy. Creating seed data for my database was a little trickier (more on that later), but I figured that out as well. 
 4. Next, I added most of the basic CRUD functionality, although I ran into issues with adding and updating products in a routine (more on that later). I had a couple of 1-1 meetings for help on this, as well.
 5. I then made a point of going through my project multiple times, adding validations to my models and controllers and looking out for any “holes” there might be. In general, I just played around with my app a bunch, creating new users and routines and products, tweaking my views and controllers when I felt something was lacking or could be improved for a better user experience.
-6. My final steps were to do some styling. To be very honest, I HATE styling and dealing with CSS. I definitely care about function more than form, but you gotta do what you gotta do. I added some very basic styling, just to bring my app one step above what you get from html right out of the box. Pretty good!  
+6. My final steps were to do some styling. To be very honest, I HATE styling and dealing with CSS. I definitely care about function more than form, but you gotta do what you gotta do. I added some very basic styling, just to bring my app one step above what you get from html right out of the box. Pretty good!&#x2028;&#x2028;
 7. But then I started to wonder about adding Bootstrap…. other students had added it to their Sinatra projects… maybe I should, too? (Perhaps not the best way to make design decisions). Ultimately I ended up adding Bootstrap to my project just to prove that I could do so successfully, which I did. Soon after doing that, I decided that the bootstrap framework actually added a lot of bulk to my app, most of which I was not using and did not care to use (read: I am lazy). Next time, folks! I may go back and add more styling to my project later on, but even then I think I might keep it simple and try something like http://getskeleton.com.
 

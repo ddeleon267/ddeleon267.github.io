@@ -33,11 +33,11 @@ This is my second major portfolio project, and the requirements are pretty simpl
 
 **MVC**
 
-MVC, or Model-View-Controller, is a programming design paradigm/pattern that designates particular responsibilities to the models, views, and controllers in your application. Models interact directly with the database and are responsible for the logic of your application; primarily they store and manipulate data. A common metaphor to describe the model’s job is that of a chef in a kitchen.
+MVC, or [Model-View-Controller](https://learn.co/tracks/full-stack-web-development-v3/sinatra/mvc-and-forms/intro-to-mvc), is a programming design paradigm/pattern that designates particular responsibilities to the models, views, and controllers in your application. *Models* interact directly with the database and are responsible for the logic of your application; primarily they store and manipulate data. A common metaphor to describe the model’s job is that of a chef in a kitchen.
 
-Views are the files (HTML, CSS, Javascript) that build the front end of your application; this is the layer that forms what the user sees and interacts with directly. The views are generally described as the “customer” in the metaphor mentioned above because they place and receive orders, which are ultimately managed by the controller and fulfilled with feedback from your models and database. Note that it is generally considered best practice to minimize the logic contained in the views.
+*Views* are the files (HTML, CSS, Javascript) that build the front end of your application; this is the layer that forms what the user sees and interacts with directly. The views are generally described as the “customer” in the metaphor mentioned above because they place and receive orders, which are ultimately managed by the controller and fulfilled with feedback from your models and database. Note that it is generally considered best practice to minimize the logic contained in the views.
 
-Controllers work as the liaison between your models and your view files. They are referred to as the waiters of your application because they take requests sent from the views, communicate with the models to fulfill those requests, and take that data back to the user. 
+*Controllers* work as the liaison between your models and your view files. In the restaurant metaphor they are referred to as the waiters of your application because they take requests sent from the views, communicate with the models to fulfill those requests, and take that data back to the user. 
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 

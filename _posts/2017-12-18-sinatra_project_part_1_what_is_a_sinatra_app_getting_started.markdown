@@ -23,14 +23,14 @@ This is my second major portfolio project, and the requirements are pretty simpl
 
 Sinatra is a lightweight Ruby framework (compared to the big guns you get with Rails) that is used to make dynamic web applications. The Sinatra community seems fun and sassy as well, and the [documentation](http://sinatrarb.com/documentation.html) is easy to read and digest (compared to, ahem, Rails documentation). 
 
-### MVC
+**MVC**
 MVC, or Model-View-Controller, is a programming design paradigm/pattern that designates particular responsibilities to the models, views, and controllers in your application. Models interact directly with the database and are responsible for the logic of your application; primarily they store and manipulate data. A common metaphor to describe the model’s job is that of a chef in a kitchen.
 
 Views are the files (HTML, CSS, Javascript) that build the front end of your application; this is the layer that forms what the user sees and interacts with directly. The views are generally described as the “customer” in the metaphor mentioned above because they place and receive orders, which are ultimately managed by the controller and fulfilled with feedback from your models and database. Note that it is generally considered best practice to minimize the logic contained in the views.
 
 Controllers work as the liaison between your models and your view files. They are referred to as the waiters of your application because they take requests sent from the views, communicate with the models to fulfill those requests, and take that data back to the user. 
 
-### CRUD functionality
+**CRUD functionality**
 CRUD refers to the basic functionality of any program that creates and persists data
 
 **Create** —> instantiate model instances <br>
@@ -38,21 +38,20 @@ CRUD refers to the basic functionality of any program that creates and persists 
 **Update** —> Edit a given model instance and persist those changes <br>
 **Delete** —> Delete (also referred to as ‘destroy’! Which is much more intense) an individual instance of your model from the database
 
-N.B. 
-The language here can get a little confusing, so it is easier for me to speak in term of Ruby models and instances. However, it is worth noting that you are not saving actual Ruby instances to your database, but rather that …..(need to add to this; my apologies)
+**N.B.** The language here can get a little confusing, so it is easier for me to speak in term of Ruby models and instances. However, it is worth noting that you are not saving actual Ruby instances to your database, but rather that …..(need to add to this; my apologies)
 
 
-### Associations
+**Associations**
 There is a lot that can be said of ActiveRecord associations, but ultimately they just provide functionality (i.e. methods) to your models in a way that attempts to mirror their relationships in real life. Yay for metaphors in programming! 
 
 These relationships include (but are not limited to!) belongs_to, has_one, has_many, and has_many, :through. You can read about these and other associations [here](http://guides.rubyonrails.org/association_basics.html). 
 
-### Validations and Other Security Features
+**Validations and Other Security Features**
 Still working on this; my apologies. 
 
 
 
-## Getting Started + Tools + Getting Help 
+**Getting Started + Tools + Getting Help**
 
 Bearing in mind the project requirements listed above, I could basically do whatever I  wanted for my Sinatra App, provided that I didn’t do a blog post app or a Twitter clone. 
 
@@ -72,15 +71,15 @@ Ultimately, I decided that I would build something that interested me but that a
 
 That’s what apps are for, anyway, and a prospective employer should be able to appreciate that regardless of content. It's great to practice your skills, but you can do that in a myriad of ways, and someone's gotta want what you're selling. Plus, picking a topic that interests me keeps me motivated, and I won’t always have that much control over what I build.&#x2028;&#x2028;
 
-### My app: RoutineAddict!
+**My app: RoutineAddict!**
 
-#### The Idea
+**The Idea**
 
 My app idea was inspired by the Reddit subreddit [r/SkincareAddiction](https://www.reddit.com/r/SkincareAddiction/), which has enjoyed great propularity in recent years, boasts nearly 390,000 subscribers, and usually has over 1,000 users lurking at any given time. This subreddit is a place for users to give and ask for skincare advice, talk about the science of skin and skincare, and compare products and routines. In the early stages of my app, I titled it SkynCareAddiction, but that is both obvious and ugly. Ultimately I changed the name to RoutineAddict, as it looks nicer and still gives a shout out to the original subreddit. Don't sue me!
 
 While thinking about my app, I considered that the subreddit doesn’t have a very organized way for users to share and organize their actual routines. There are individual posts where users can share their routines, but these can get lost in other content over time and have to be searched for. There are resources and posts that talk about product recommendations (like "Holy Grail" product threads) and techniques that particular users like, but it requires some hunting around from the user if you are looking to fill a particular need or build a structured routine. I think an app that focuses on routines in particular, but also makes it easier to find routines associated with a particular user,  fills a need that is desired but not executed well in the current subreddit.
 
-#### Execution
+**Execution**
 1. Once I had my idea fleshed out, I needed to map out my models, their attributes, and their associations.  I chose to do this on white boards (I have a bunch of big ones at home) as well as on plain old looseleaf paper. I know there are programs that let you do this on your computer, but I prefer to do it this way, for now.
 2. For actually setting up my app, I used this recommended [blog post](http://blog.flatironschool.com/how-to-build-a-sinatra-web-app-in-10-steps) by another Flatiron student. Easy peasy. I am 80% sure this was mentioned by Avi in one of his lectures, but maybe I picked it up on slack?? 
 3. After getting the basic structure of my project set up, adding views, controllers, models, and migrations was pretty easy. Creating seed data for my database was a little trickier (more on that later), but I figured that out as well. 

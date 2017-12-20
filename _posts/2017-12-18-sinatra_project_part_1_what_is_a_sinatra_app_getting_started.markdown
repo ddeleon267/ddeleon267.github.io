@@ -39,6 +39,9 @@ MVC, or [Model-View-Controller](https://learn.co/tracks/full-stack-web-developme
 
 *Controllers* work as the liaison between your models and your view files. In the restaurant metaphor they are referred to as the waiters of your application because they take requests sent from the views, communicate with the models to fulfill those requests, and take that data back to the user. 
 
+![](http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-waiter-008.jpg)
+
+
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
 **CRUD functionality**
@@ -56,7 +59,7 @@ MVC, or [Model-View-Controller](https://learn.co/tracks/full-stack-web-developme
 
 **Associations**
 
-There is a lot that can be said of ActiveRecord associations, but ultimately they just provide functionality (i.e. methods) to your models in a way that attempts to mirror their relationships in real life. Yay for metaphors in programming! 
+There is a lot that can be said of [ActiveRecord associations](https://learn.co/tracks/full-stack-web-development-v3/orms-and-activerecord/associations/activerecord-associations), but ultimately they just provide functionality (i.e. methods) to your models in a way that attempts to mirror their relationships in real life. Yay for metaphors in programming! 
 
 These relationships include (but are not limited to!) belongs_to, has_one, has_many, and has_many, :through. You can read about these and other associations [here](http://guides.rubyonrails.org/association_basics.html). 
 

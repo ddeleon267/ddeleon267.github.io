@@ -66,17 +66,26 @@ These relationships include (but are not limited to!) belongs_to, has_one, has_m
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
 **Validations and Other Security Features**
-Still working on this; my apologies. 
+
+Website security is a BIG topic and my knowledge of it (so far!) is very limited, but I'll just touch on a few things that are expected to be included in this project. The first is not a "security" feature per se but is related to protecting the integrity of your database: validations. The second is more of what you'd expect; protecting sensitive information from your users and making sure they can only view content they're supposed to!
+
+Validations are a means of protecting your database from "bad" data: data that shouldn't even be saved to your database in the first place. [Active Record validations](https://learn.co/tracks/full-stack-web-development-v3/rails/validations-and-forms/activerecord-validations) are method calls that you add to your models that prevent instances of the class from being saved if something is off, like if an email is in the wrong format, a chosen username is already taken, or if required data is missing when a form is submitted. Ideally, if you're using ActiveRecord validations you should also provide a means (like a flash message) for letting the user know something has gone wrong so that the problem can be correctly. You can get MUCH more information about Active Record Validations [here](http://guides.rubyonrails.org/active_record_validations.html).
+
+Some security is handled in your controllers as well; these include basic tasks like only allowing logged-in users to view certain pages of your application and routing appropriately if the user is not logged in, is not in the database (so is not a current user or has entered bas username/password information), or has otherwise submitted bad form data. Helper methods like **#logged_in?** and **#current_user** are helpful here, as you can add conditions to your controller actions and reroute appropriately depending on whether thoose conditions are met. This will help keep a user's personal pages hidded from other users. It's worth noting that you should consider security on both "sides" of any form action, i.e. both the get/put actions as well as any post, patch, and delete actions so that no one is able to "html hack" your form data!
+
+Last but not least (seriously, it's the MOST important thing): password. It is on you to protect the sensitive data that your users entrust to you, especially as far as passwords are concerned. Not everyone is great about using strong and unique passwords, so there are a few added layers of security that you need should the worst happen and a malicious actor gets into your database. Again, this is a big topic, but some simple things you can (and should!) include at this level are [still working on this; apologies!]
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         * 
 
-**Getting Started + Tools + Getting Help**
+**My Project: Getting Started + Tools + Getting Help**
 
-Bearing in mind the project requirements listed above, I could basically do whatever I  wanted for my Sinatra App, provided that I didn’t do a blog post app or a Twitter clone. 
+I could basically do whatever I  wanted for my Sinatra App, provided that I didn’t do a blog post app or a Twitter clone. 
 
-Naturally, I spent too much time fussing over what option I should choose, and I gave myself a few days to stew on what I wanted my topic to be. In typical fashion, I chose to do some research for ideas; I looked at the examples given in the project assignment, and I went to a couple of project study groups. Additionally, I creeped on the GitHub pages of every Flatiron (WeWork?) coach I could remember to see what they had done for their own projects. I would recommend that as a good place to start; it's nice to know what's in the realm of of possibility!
+Naturally, I spent too much time fussing over what topic I should choose, and I gave myself a few days to stew on what I wanted it to be. I scouted around for ideas, looking at the examples given in the project assignment and attending a couple of project study groups. Additionally, I creeped on the GitHub pages of every Flatiron (WeWork?) coach I could think of to see what they had done for their own projects. I would recommend that as a good place to start; it's nice to know what's in the realm of of possibility!
 
 I still wasn’t sure what I wanted to do, though. My thought process was something like this:
+
+![](https://pbs.twimg.com/media/DN4Ju9oX0AEp62J.jpg)
 
 **Me:** I should just do something simple, like a to-do list. People joke about this being [overdone](https://medium.freecodecamp.org/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d), but there is something to be said about not reinventing the wheel, especially as a beginner. Being basic means you learn to master the basics.&#x2028;&#x2028;
 

@@ -8,7 +8,7 @@ permalink:  sinatra_project_part_1_what_is_a_sinatra_app_getting_started
 (Note that this is a VERY rough draft and only serves as an initial blog post for my Sinatra Project. In particular, it is a brief intro to Sinatra + a VERY basic overview of the design stages for my project. There will be subsequent posts that 1) go through my app in more detail and 2) reflect on my project and process as well as explore difficulties and future considerations. Links to my project and video walkthrough will also be added later)
 
 
-## Intro 
+**Intro **
 
 This is intended to be a brief introduction to my Sinatra App with a little background for those who are unfamilliar with or new to Sinatra applications
 

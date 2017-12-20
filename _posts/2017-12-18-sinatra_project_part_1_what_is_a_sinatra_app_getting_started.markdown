@@ -9,6 +9,7 @@ permalink:  sinatra_project_part_1_what_is_a_sinatra_app_getting_started
 
 
 ## Intro 
+
 This is intended to be a brief introduction to my Sinatra App with a little background for those who are unfamilliar with or new to Sinatra applications
 
 This is my second major portfolio project, and the requirements are pretty simple. The app must:

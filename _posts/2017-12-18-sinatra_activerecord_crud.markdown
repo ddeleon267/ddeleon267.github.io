@@ -1,13 +1,10 @@
 ---
 layout: post
 title:      "Sinatra ActiveRecord CRUD"
-date:       2017-12-18 18:25:35 +0000
+date:       2017-12-18 13:25:35 -0500
 permalink:  sinatra_activerecord_crud
 ---
 
-
-
-Obligatory intro stuff about this lab. Mention the stuff that you're given off the bat
 
 --------------------------------------------
 ## CREATE Action

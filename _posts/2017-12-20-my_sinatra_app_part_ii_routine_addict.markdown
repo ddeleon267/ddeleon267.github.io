@@ -11,6 +11,8 @@ This post serves as a more thorough description of the main elements of my Sinat
  If you are unfamiliar with Sinatra or would like a more detailed introduction to my project as well as insight on my initial planning and design process, check out my last blog post. 
  
  If you'd like to read my reflections on the project as well as future considerations, peep my next blog post.
+ 
+*         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
 **Project Structure**
 

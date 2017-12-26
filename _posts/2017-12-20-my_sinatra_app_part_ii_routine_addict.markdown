@@ -14,18 +14,18 @@ This post serves as a more thorough description of the main elements of my Sinat
  
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
-***Project Structure***
+**Project Structure**
 
-*Models and Associations*
+***Models and Associations***
 
 My app has four models: users, routines, products, and routine_products; the latter specifies a join table.  
 
-**User**
+***User***
 
 A user's atrributes include a *username*, an *email*, and a *password* (via password_digest). A user **has_many :routines**.
 
 
-**Routine**
+***Routine***
 
 A routine has a *name* attribute, which should  be descriptive of its purpose. For example:
 * Morning Routine
@@ -35,11 +35,11 @@ A routine has a *name* attribute, which should  be descriptive of its purpose. F
 
 A routine also has attributes of *products* (as a collection) as well as a *description*. This description could include notes about product use,  general instructions and suggestions for using particular products together, and any additional notes about skin types for whom the routine might be particularly suited (or not). A routine **has_many :routine_products** and **has_many :products, through: routine_products**.
 
-**Products** 
+***Products ***
 
 A product has a *name* and a *category* (e.g. cleanser, moisturizer, sunscreen). A product also has *ingredients* and *notes*, the latter of which allows a user to add any additional information that might be important to users, like whether a product has a problematic ingredient or quality despite its benefits, or if it is particularly suited to a certain skin condition or type. 
 
-**Routine_products + a Word on Associations**
+***Routineproducts *** *+ a Word on Associations*
 
 It is worth noting that this project only required very simple model associations (at least one has_many). It is also worth noting that I ignored that advice multiple times, both in my initial planning of my project as well as when I asked around for advice on Slack.&#x2028;&#x2028;You see, I am stubborn, and I want what I want, and I was dead-set on a has_many_through relationship among some of my models. I considered the following two options:
 

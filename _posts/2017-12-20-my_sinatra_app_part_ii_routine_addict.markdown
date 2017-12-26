@@ -44,9 +44,11 @@ This class validates the presence of the routine name, products, and description
 
 A product has a *name* and a *category* (e.g. cleanser, moisturizer, sunscreen). A product also has *ingredients* and *notes*, the latter of which allows a user to add any additional information that might be important to users, like whether a product has a problematic ingredient or quality despite its benefits, or if it is particularly suited to a certain skin condition or type. 
 
+This class validates the presence of the product name.
+
 **Routine_products + a Word on Associations**
 
-It is worth noting that this project only required very simple model associations (at least one has_many). It is also worth noting that I ignored that advice multiple times, both in my initial planning of my project as well as when I asked around for advice on Slack.&#x2028;&#x2028;You see, I am stubborn, and I want what I want, and I was dead-set on a has_many_through relationship among some of my models. I considered the following two options:
+It is worth noting that this project only required very simple model associations (at least one has_many). It is also worth noting that I ignored that advice multiple times, both in my initial planning of my project as well as when I asked around for advice on Slack. You see, I am stubborn, and I want what I want, and I was dead-set on a has_many_through relationship among some of my models. I considered the following two options:
 
 Simpler (lol of course this is not the one I chose)
 * **user has_many :routines**
@@ -74,7 +76,7 @@ Harder
 * **product has_many :routine_products**
 * **product has_many :routines, through: :routine_products**
 
-This seemed nicer at the time, and it also felt right for a routine to not “belong” to any one user.  Although I do have some issues with that now, which I’ll mention in my next blog post.
+This seemed nicer at the time, and it also felt right for a routine to not “belong” to any one user.  (Although I do have some issues with that now, which I’ll mention in my next blog post.)
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
@@ -84,31 +86,31 @@ My migrations were simple enough to do once I had the associations figured out. 
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
-**Controllers, Routes, and Views**	
+***Controllers, Routes, and Views***	
 
 **Application_controller**
 
-Generally it is common to have a main application controller from which subsequent controllers will inherit. This controller contains any logic that will be used in all controllerers, like helper methods. My application controller routes to the site’s main index page (if the user is not logged in) or the user’s home page (if the user is logged in). It also contains the helper methods **#logged_in?** (returns true/false depending on whether the user is logged in) and **#current_user** (returns the current user object). 
+Generally it is common to have a main application controller from which subsequent controllers will inherit. This controller contains any logic that will be used in all controllers, like helper methods. My application controller routes to the site’s main index page (if the user is not logged in) or the user’s home page (if the user is logged in). It also contains the helper methods **#logged_in?** (returns true/false depending on whether the user is logged in) and **#current_user** (returns the current user object). 
 
 **Users_controller**
  
-**get ‘/signup’ and post ‘/signup’**
+*get ‘/signup’ and post ‘/signup’*
  
 The ‘get’ action renders the signup form view if the user is not currently logged in, and the ‘post’ action uses that form data to either instantiate and save that user object and direct the user to her homepage (if everything looks good) or to redirect to the signup view if something went wrong. If there is an issue, a flash message is used to give the user an indication as to what it is (user already exists, invalid email, etc.)
 
-**get ‘/login’ and post ‘/login’**
+*get ‘/login’ and post ‘/login’*
 
 If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page. The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message) if the user data doesn’t match a current user in the database.
 
-**get ‘/home’**
+*get ‘/home’*
 
 This action will direct the user to his home page, where he can easily view recently-added products, routines, and users. A user can view his home page if he is logged in, and he cannot view any other user’s home page.
 
-**get ‘/users/slug’**
+*get ‘/users/slug’*
 
 This action will route to the user’s show page, which in this instance is essentially a profile page. This page lists the routines associated with a particular user. Any logged-in user can view any user’s profile page, including that user.
 
-**get ‘/logout’**
+*get ‘/logout’*
 
 This action does not render a separate logout view, but instead clears the session hash to “logout” the user and then redirects to the main application index page.
 
@@ -118,22 +120,22 @@ This action does not render a separate logout view, but instead clears the sessi
 
 **CREATE**
 
-**get ‘/routines/new’ and post ‘/routines’**
+*get ‘/routines/new’ and post ‘/routines’*
 
 The ‘get’ action renders the form for creating a new routine for a logged-in user; otherwise it will redirect to the login page (for future reference, this will be the case for any action when a user is not logged in). The 'post' action double-checks that the user is logged in (more on that later) and uses the form data in the params hash to create a routine, associate it with the user, and save it to the database (assuming that all validations pass). If everything looks good, the controller will redirect to the show page for that routine.
 
 **READ**
-**get ‘/routines’ and get ‘/routine/:id’**
+*get ‘/routines’ and get ‘/routine/:id’*
 
 These actions render all of a user’s routines or one particular routine, respectively. It's worth noting that the content displayed in the routine index view is perhaps too similar to what is currently displayed on a user’s show/profile page, and I would tweak this in the future. 
 
 **UPDATE**
-**get ‘/routines/:id/edit' and patch ‘/routines/:id'**
+*get ‘/routines/:id/edit' and patch ‘/routines/:id'*
 
 The edit action renders the view for the edit form page so that  the user can edit that routine, and the patch action used the form data in the params hash to update and save the routine assuming all validations can pass. Only a logged-in user who is associated with that routine may edit that routine, and there are checks for this in both actions.
 
 **DELETE**
-**delete ‘/routines/:id/delete'**
+*delete ‘/routines/:id/delete'*
 
 Does what it says. If the logged-in user is associated with the chosen routine, the routine will be deleted. Otherwise the user will be redirected to the /routines page, and a flash message will confirm that the routine has been successfully deleted.
 

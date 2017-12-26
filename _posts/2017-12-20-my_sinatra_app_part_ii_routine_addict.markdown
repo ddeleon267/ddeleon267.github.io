@@ -14,9 +14,9 @@ This post serves as a more thorough description of the main elements of my Sinat
  
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
-**Project Structure**
+***Project Structure***
 
-**Models and Associations**
+*Models and Associations*
 
 My app has four models: users, routines, products, and routine_products; the latter specifies a join table.  
 

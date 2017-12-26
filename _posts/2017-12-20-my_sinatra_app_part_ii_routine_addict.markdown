@@ -6,11 +6,10 @@ permalink:  my_sinatra_app_part_ii_routine_addict
 ---
 
 
-This post serves as a more thorough description of the main elements of my Sinatra portfolio project, namely its models, associations, controllers, and views. This app, titled Routine Addict, allows users to create and share skincare routines as well as products associated with those routines. 
+This post serves as an outline of my Sinatra portfolio project, including its models, associations, controllers, and views. This app, titled Routine Addict, allows users to create and share skincare routines as well as products associated with those routines. 
 
- If you are unfamiliar with Sinatra or would like a more detailed introduction to my project as well as insight on my initial planning and design process, check out my last blog post. 
+ If you are unfamiliar with Sinatra, peep my last blog post. If you want to learn more about my planning process for this project or my current reflections on the project, check out my next blog post. 
  
- If you'd like to read my reflections on the project as well as future considerations, peep my next blog post.
  
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
@@ -24,6 +23,10 @@ My app has four models: users, routines, products, and routine_products; the lat
 
 A user's atrributes include a *username*, an *email*, and a *password* (via password_digest). A user **has_many :routines**.
 
+This class contains validations for the presence of the username, email, and password attributes; it also validates for username uniqueness, email formatting, and password length.
+
+The user class also contains two helper methods. The first method, #slug,  returns a "slugged" verson of a user's username. The second is a class method that finds and returns a matching user object (by slug) if it exists. 
+
 
 **Routine**
 
@@ -34,6 +37,8 @@ A routine has a *name* attribute, which should  be descriptive of its purpose. F
 * Sensitive Skin Routine
 
 A routine also has attributes of *products* (as a collection) as well as a *description*. This description could include notes about product use,  general instructions and suggestions for using particular products together, and any additional notes about skin types for whom the routine might be particularly suited (or not). A routine **has_many :routine_products** and **has_many :products, through: routine_products**.
+
+This class validates the presence of the routine name, products, and description attributes.
 
 **Products** 
 

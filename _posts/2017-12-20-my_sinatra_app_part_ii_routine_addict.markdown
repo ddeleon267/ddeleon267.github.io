@@ -20,12 +20,12 @@ This post serves as a more thorough description of the main elements of my Sinat
 
 My app has four models: users, routines, products, and routine_products; the latter specifies a join table.  
 
-***User***
+**User**
 
 A user's atrributes include a *username*, an *email*, and a *password* (via password_digest). A user **has_many :routines**.
 
 
-***Routine***
+**Routine**
 
 A routine has a *name* attribute, which should  be descriptive of its purpose. For example:
 * Morning Routine
@@ -35,27 +35,27 @@ A routine has a *name* attribute, which should  be descriptive of its purpose. F
 
 A routine also has attributes of *products* (as a collection) as well as a *description*. This description could include notes about product use,  general instructions and suggestions for using particular products together, and any additional notes about skin types for whom the routine might be particularly suited (or not). A routine **has_many :routine_products** and **has_many :products, through: routine_products**.
 
-***Products***
+**Products** 
 
 A product has a *name* and a *category* (e.g. cleanser, moisturizer, sunscreen). A product also has *ingredients* and *notes*, the latter of which allows a user to add any additional information that might be important to users, like whether a product has a problematic ingredient or quality despite its benefits, or if it is particularly suited to a certain skin condition or type. 
 
-***Routineproducts*** *+ a Word on Associations*
+**Routine_products + a Word on Associations**
 
 It is worth noting that this project only required very simple model associations (at least one has_many). It is also worth noting that I ignored that advice multiple times, both in my initial planning of my project as well as when I asked around for advice on Slack.&#x2028;&#x2028;You see, I am stubborn, and I want what I want, and I was dead-set on a has_many_through relationship among some of my models. I considered the following two options:
 
 Simpler (lol of course this is not the one I chose)
 * **user has_many :routines**
-* **user has_many :products, through: :routines**
+* * **user has_many :products, through: :routines**
 
 * **routine belongs_to :user**
-* **routine belongs_to :product**
+* * **routine belongs_to :product**
 
 * **product has_many :routines**
-* **product has_many :users, through: :routines**
+* * **product has_many :users, through: :routines**
 	
 This option was recommended to me by an older and wiser student on Slack. It also seem to mirror the common doctor/patient/appointment relationship mentioned several times in the curriculum and also in the Active Record Association documentation. But... something about it didn’t sit right with me. In particular, it didn’t seem right for a routine to belong to a product. Avi has spoken on many occasions about using metaphors in programming to make our programs model real life, and this particular setup didn’t really do it for me. Although it made some sense to use the routine model/table as a join table, I wasn’t really crazy about that. Hence option two, which is what I went with. 
 
-Harder (I just like to do the most)
+Harder
 
 * **user has_many :routines**
 

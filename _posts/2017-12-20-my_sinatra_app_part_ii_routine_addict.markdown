@@ -100,7 +100,7 @@ The ‘get’ action renders the signup form view if the user is not currently l
 
 *get ‘/login’ and post ‘/login’*
 
-If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page. The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message explaining the error) if the user data doesn’t match a current user in the database.
+If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page(for future reference, this will be the case for any action when a user is not logged in). The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message explaining the error) if the user data doesn’t match a current user in the database.
 
 *get ‘/home’*
 
@@ -122,22 +122,26 @@ This action does not render a separate logout view, but instead clears the sessi
 
 *get ‘/routines/new’ and post ‘/routines’*
 
-The ‘get’ action renders the form for creating a new routine for a logged-in user; otherwise it will redirect to the login page (for future reference, this will be the case for any action when a user is not logged in). The 'post' action double-checks that the user is logged in (more on that later) and uses the form data in the params hash to create a routine, associate it with the user, and save it to the database (assuming that all validations pass). If everything looks good, the controller will redirect to the show page for that routine.
+The ‘get’ action renders the form for creating a new routine for a logged-in user. The 'post' action double-checks that the user is logged in and uses the form data in the params hash to create a routine, associate it with the user, and save it to the database (assuming that all validations pass). If everything looks good, the controller will redirect to the show page for that routine. Otherwise, the controller will redirect to the 'get' action and the view will render a flash message that explains what went wrong.
 
 **READ**
 *get ‘/routines’ and get ‘/routine/:id’*
 
-These actions render all of a user’s routines or one particular routine, respectively. It's worth noting that the content displayed in the routine index view is perhaps too similar to what is currently displayed on a user’s show/profile page, and I would tweak this in the future. 
+These actions render the views for all of a user’s routines or one particular routine, respectively. 
 
 **UPDATE**
 *get ‘/routines/:id/edit' and patch ‘/routines/:id'*
 
-The edit action renders the view for the edit form page so that  the user can edit that routine, and the patch action used the form data in the params hash to update and save the routine assuming all validations can pass. Only a logged-in user who is associated with that routine may edit that routine, and there are checks for this in both actions.
+The edit action renders the edit form view,  and the patch action uses the form data in the params hash to update and save the specified routine if all validations pass. 
+
+Only a logged-in user who is associated with the specified routine may edit that routine, and there are checks for this in both update actions.
 
 **DELETE**
 *delete ‘/routines/:id/delete'*
 
-Does what it says. If the logged-in user is associated with the chosen routine, the routine will be deleted. Otherwise the user will be redirected to the /routines page, and a flash message will confirm that the routine has been successfully deleted.
+Does what it says! If the logged-in user is associated with the chosen routine, the routine will be deleted. Otherwise the user will be redirected to the /routines page, and a flash message will confirm that the routine has been successfully deleted.
+
+Note that this action does not have its own view but is accessed via a button on the routine show page.
 
 **Products Controller**
 

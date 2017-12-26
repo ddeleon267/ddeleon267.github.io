@@ -52,13 +52,13 @@ It is worth noting that this project only required very simple model association
 
 Simpler (lol of course this is not the one I chose)
 * **user has_many :routines**
-* * **user has_many :products, through: :routines**
+* **user has_many :products, through: :routines**
 
 * **routine belongs_to :user**
-* * **routine belongs_to :product**
+* **routine belongs_to :product**
 
 * **product has_many :routines**
-* * **product has_many :users, through: :routines**
+* **product has_many :users, through: :routines**
 	
 This option was recommended to me by an older and wiser student on Slack. It also seem to mirror the common doctor/patient/appointment relationship mentioned several times in the curriculum and also in the Active Record Association documentation. But... something about it didn’t sit right with me. In particular, it didn’t seem right for a routine to belong to a product. Avi has spoken on many occasions about using metaphors in programming to make our programs model real life, and this particular setup didn’t really do it for me. Although it made some sense to use the routine model/table as a join table, I wasn’t really crazy about that. Hence option two, which is what I went with. 
 

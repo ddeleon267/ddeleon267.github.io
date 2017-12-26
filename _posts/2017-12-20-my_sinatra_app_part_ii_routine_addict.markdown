@@ -71,12 +71,16 @@ Harder (I just like to do the most)
 
 This seemed nicer at the time, and it also felt right for a routine to not “belong” to any one user.  Although I do have some issues with that now, which I’ll mention in my next blog post.
 
+*         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
 **Migrations**
 
 My migrations were simple enough to do once I had the associations figured out. In addition to the models and attributes mentioned above, I also made sure that my routines table had a foreign key of user_id, and that my join table **routine_products** had foreign keys of *routine_id* and *product_id*. I did end up having to do an additional migration to rename a column in my **products** table; I had initially named one the the columns “type” which is a reserved word, so I ended up renaming that to “category.”
 
+*         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
+
 **Controllers, Routes, and Views**	
+
 **Application_controller**
 
 Generally it is common to have a main application controller from which subsequent controllers will inherit. This controller contains any logic that will be used in all controllerers, like helper methods. My application controller routes to the site’s main index page (if the user is not logged in) or the user’s home page (if the user is logged in). It also contains the helper methods **#logged_in?** (returns true/false depending on whether the user is logged in) and **#current_user** (returns the current user object). 

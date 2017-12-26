@@ -5,8 +5,6 @@ date:       2017-12-20 10:58:53 -0500
 permalink:  my_sinatra_app_part_ii_routine_addict
 ---
 
-**Note that this is a VERY rough draft and that this is one of a three-part blog series on this particular project.
-**
 
 This post serves as a more thorough description of the main elements of my Sinatra portfolio project, namely its models, associations, controllers, and views. This app, titled Routine Addict, allows users to create and share skincare routines as well as products associated with those routines. 
 
@@ -15,6 +13,7 @@ This post serves as a more thorough description of the main elements of my Sinat
  If you'd like to read my reflections on the project as well as future considerations, peep my next blog post.
 
 **Project Structure**
+
 **Models and Associations**
 
 My app has four models: users, routines, products, and routine_products; the latter specifies a join table.  

@@ -80,9 +80,9 @@ This seemed nicer at the time, and it also felt right for a routine to not “be
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
-**Migrations**
+***Migrations***
 
-My migrations were simple enough to do once I had the associations figured out. In addition to the models and attributes mentioned above, I also made sure that my routines table had a foreign key of user_id, and that my join table **routine_products** had foreign keys of *routine_id* and *product_id*. I did end up having to do an additional migration to rename a column in my **products** table; I had initially named one the the columns “type” which is a reserved word, so I ended up renaming that to “category.”
+My migrations were simple enough to do once I had the associations figured out. In addition to the models and attributes mentioned above, I also made sure that my routines table had a foreign key of *user_id*, and that my join table **routine_products** had foreign keys of *routine_id* and *product_id*. I did end up having to do an additional migration to rename a column in my **products** table; I had initially named one the the columns “type” which is a reserved word, so I ended up renaming that to “category.”
 
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
 
@@ -90,17 +90,17 @@ My migrations were simple enough to do once I had the associations figured out. 
 
 **Application_controller**
 
-Generally it is common to have a main application controller from which subsequent controllers will inherit. This controller contains any logic that will be used in all controllers, like helper methods. My application controller routes to the site’s main index page (if the user is not logged in) or the user’s home page (if the user is logged in). It also contains the helper methods **#logged_in?** (returns true/false depending on whether the user is logged in) and **#current_user** (returns the current user object). 
+It is common to have a main application controller from which subsequent controllers will inherit. This controller contains any logic that will be used in all controllers, like helper methods. My application controller routes to the site’s main index page (if the user is not logged in) or the user’s home page (if the user is logged in). It also contains the helper methods **#logged_in?** (returns true/false depending on whether the user is logged in) and **#current_user** (returns the current user object) to help streamline some of the conditional statements that will be needed in other controllers. 
 
 **Users_controller**
  
 *get ‘/signup’ and post ‘/signup’*
  
-The ‘get’ action renders the signup form view if the user is not currently logged in, and the ‘post’ action uses that form data to either instantiate and save that user object and direct the user to her homepage (if everything looks good) or to redirect to the signup view if something went wrong. If there is an issue, a flash message is used to give the user an indication as to what it is (user already exists, invalid email, etc.)
+The ‘get’ action renders the signup form view if the user is not currently logged in. The ‘post’ action uses that form data to  instantiate and save a new user object if all validations pass; in that case, the controller will redirect to the user's homepage. Otherwise, the controller will redirect to the signup view, which will render a flash message to give the user an indication as to what the problem was (user already exists, invalid email, etc.)
 
 *get ‘/login’ and post ‘/login’*
 
-If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page. The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message) if the user data doesn’t match a current user in the database.
+If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page. The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message explaining the error) if the user data doesn’t match a current user in the database.
 
 *get ‘/home’*
 
@@ -108,7 +108,7 @@ This action will direct the user to his home page, where he can easily view rece
 
 *get ‘/users/slug’*
 
-This action will route to the user’s show page, which in this instance is essentially a profile page. This page lists the routines associated with a particular user. Any logged-in user can view any user’s profile page, including that user.
+This action will route to the user’s show page, which in this app is essentially a profile page; this page lists the routines associated with a particular user. Any logged-in user can view any user’s profile page, including that user.
 
 *get ‘/logout’*
 

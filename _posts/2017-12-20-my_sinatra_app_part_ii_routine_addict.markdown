@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Sinatra Project Part II: Routine Addict"
+title:      "Sinatra Project: Routine Addict!"
 date:       2017-12-20 10:58:53 -0500
 permalink:  my_sinatra_app_part_ii_routine_addict
 ---

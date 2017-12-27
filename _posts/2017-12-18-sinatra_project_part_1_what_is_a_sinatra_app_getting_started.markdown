@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Sinatra Project Part I: What is a Sinatra App? + Getting Started"
+title:      "Sinatra Project Part: What is a Sinatra App? + Getting Started"
 date:       2017-12-18 14:32:04 -0500
 permalink:  sinatra_project_part_1_what_is_a_sinatra_app_getting_started
 ---

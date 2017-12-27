@@ -127,7 +127,7 @@ The ‘get’ action renders the form for creating a new routine for a logged-in
 **READ**
 *get ‘/routines’ and get ‘/routine/:id’*
 
-These actions render the views for all of a user’s routines or one particular routine, respectively. 
+These actions render the views for all of a user’s routines or for one particular routine, respectively. 
 
 **UPDATE**
 *get ‘/routines/:id/edit' and patch ‘/routines/:id'*
@@ -145,12 +145,12 @@ Note that this action does not have its own view but is accessed via a button on
 
 **Products Controller**
 
-This mirrors many of the normal CRUD actions that have been outlined in the routine controller above, so I will just highlight the differences for conciseness. 
+The controller actions in this controller generally mirror the normal CRUD actions that have been outlined in the routine controller above, so I will just highlight the differences for conciseness. 
 
 This controller has basic Create, Read, and Update functionality, with validations similar to those mentioned previously.  Two things worth noting:
 
-1. There is no delete action for a product. There a product does not belong to any one user and can be used by many users and in many routines, so to me it did not make sense to allow a user to delete a product even if he created it. There is already a mechanism for removing a product from an individual routine, and I think that is good enough. 
-2. I thought long and hard about who would be able to edit any given product. It makes sense for the user who added the product to be able to edit it, since he might make a typo or want to add something, etc. However, it also makes sense for other users to be able to edit a product for the same reasons. Keeping all of this in mind, I built the product edit and patch actions to allow any logged-in user to edit any product. 
+* There is no delete action for a product.  A product does not belong to any one user and can be used by many users and in many routines, so to me it did not make sense to allow a user to delete a product even if he created it. There is already a mechanism for removing a product from an individual routine, and I think that is sufficient. 
+* I thought long and hard about who would be able to edit any given product. It makes sense for the user who added the product to be able to edit it, since he might make a typo or want to add something, etc. However, it also makes sense for other users to be able to edit a product for the same reasons. Keeping all of this in mind, I built the product edit and patch actions to allow any logged-in user to edit any product. 
 
 This is not a perfect solution, and likely not the best solution for a site that actually has users! Not every user may agree on what is added to a product, although I suppose it’s a little like Wikipedia in that anyone can fix an issue. It also doesn’t prevent malicious users from creating an account and wreaking havoc on existing products, so that is a consideration. 
 

@@ -6,9 +6,11 @@ permalink:  my_sinatra_app_part_ii_routine_addict
 ---
 
 
-This post serves as an outline of my Sinatra portfolio project, including its models, associations, controllers, and views. This app, titled Routine Addict, allows users to create and share skincare routines as well as products associated with those routines. 
+This post serves as an outline of my Sinatra portfolio project, including its models, associations, controllers, and views. The app, titled Routine Addict, allows users to create and share skincare routines as well as products associated with those routines. 
 
- If you are unfamiliar with Sinatra, peep my last blog post. If you want to learn more about my planning process for this project or my current reflections on the project, check out my next blog post. 
+You can find a video walkthrough of my app here[](https://youtu.be/Fo2jpYNWKR4) or visit the git rep [here](https://github.com/ddeleon267/routine-addict).
+
+ If you are unfamiliar with Sinatra, peep [my last blog post](http://ddeleon.com/sinatra_project_part_1_what_is_a_sinatra_app_getting_started). If you want to learn more about my planning process for this project or my current reflections on the project, check out [this blog post](http://ddeleon.com/sinatra_project_reflections_process_and_future_considerations). 
  
  
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *

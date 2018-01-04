@@ -8,9 +8,9 @@ permalink:  my_sinatra_app_part_ii_routine_addict
 
 This post serves as an outline of my Sinatra portfolio project, including its models, associations, controllers, and views. The app, titled Routine Addict, allows users to create and share skincare routines as well as products associated with those routines. 
 
-You can find a video walkthrough of my app [here](https://www.youtube.com/watch?v=Fo2jpYNWKR4) or visit the git rep [here](https://github.com/ddeleon267/routine-addict).
+You can find a video walkthrough of my app [here](https://www.youtube.com/watch?v=Fo2jpYNWKR4) or visit the git repo [here](https://github.com/ddeleon267/routine-addict).
 
- If you are unfamiliar with Sinatra, peep [my last blog post](http://ddeleon.com/sinatra_project_part_1_what_is_a_sinatra_app_getting_started). If you want to learn more about my planning process for this project or my current reflections on the project, check out [this blog post](http://ddeleon.com/sinatra_project_reflections_process_and_future_considerations). 
+ If you are unfamiliar with Sinatra, peep [my last blog post](http://ddeleon.com/sinatra_project_part_1_what_is_a_sinatra_app_getting_started). If you want to learn more about my planning process for this project or my current reflections on it, check out [this blog post](http://ddeleon.com/sinatra_project_reflections_process_and_future_considerations). 
  
  
 *         *          *          *          *          *          *           *          *          *         *          *          *          *          *          *         *          *          *          *         *
@@ -27,7 +27,7 @@ A user's atrributes include a *username*, an *email*, and a *password* (via pass
 
 This class contains validations for the presence of the username, email, and password attributes; it also validates for username uniqueness, email formatting, and password length.
 
-The user class also contains two helper methods. The first method, #slug,  returns a "slugged" verson of a user's username. The second is a class method that finds and returns a matching user object (by slug) if it exists. 
+The user class also contains two helper methods. The first method, #slug,  returns a ["slugged"](https://en.wikipedia.org/wiki/Semantic_URL#Slug) verson of a user's username. The second is a class method that finds and returns a matching user object (by slug) if it exists. 
 
 
 **Routine**
@@ -62,7 +62,7 @@ Simpler (lol of course this is not the one I chose)
 * **product has_many :routines**
 * **product has_many :users, through: :routines**
 	
-This option was recommended to me by an older and wiser student on Slack. It also seem to mirror the common doctor/patient/appointment relationship mentioned several times in the curriculum and also in the Active Record Association documentation. But... something about it didn’t sit right with me. In particular, it didn’t seem right for a routine to belong to a product. Avi has spoken on many occasions about using metaphors in programming to make our programs model real life, and this particular setup didn’t really do it for me. Although it made some sense to use the routine model/table as a join table, I wasn’t really crazy about that. Hence option two, which is what I went with. 
+This option was recommended to me by an older and wiser student on Slack. It also seemed to mirror the common doctor/patient/appointment relationship mentioned several times in the curriculum and also in the Active Record Association documentation. But... something about it didn’t sit right with me. In particular, it didn’t seem right for a routine to belong to a product. Avi has spoken on many occasions about using metaphors in programming to make our programs model real life, and this particular setup didn’t really do it for me. Although it made some sense to use the routine model/table as a join table, I wasn’t really crazy about that. Hence option two, which is what I went with. 
 
 Harder
 
@@ -102,7 +102,7 @@ The ‘get’ action renders the signup form view if the user is not currently l
 
 *get ‘/login’ and post ‘/login’*
 
-If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page(for future reference, this will be the case for any action when a user is not logged in). The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message explaining the error) if the user data doesn’t match a current user in the database.
+If the user is not already logged in, the ‘get’ action will render the login form view; otherwise it will redirect to the user’s home page (for future reference, this will be the case for any action when a user is not logged in). The ‘post’ action processes the form data and will either redirect the user to her home page or back to the login form (with a flash message explaining the error) if the user data doesn’t match a current user in the database.
 
 *get ‘/home’*
 
@@ -114,9 +114,8 @@ This action will route to the user’s show page, which in this app is essential
 
 *get ‘/logout’*
 
-This action does not render a separate logout view, but instead clears the session hash to “logout” the user and then redirects to the main application index page.
+This action does not render a separate logout view, but instead clears the session hash to “log out” the user and then redirects to the main application index page.
 
-**N.B.** This controller does not currently allow for a user to delete herself, in part because it did not occur to me to create this action! I think it would be worth implementing in the future, though. I do have to think about this some more, as I'm not sure what (if any) bugs this might create elsewhere in the application. 
 
 **Routines_controller**
 
@@ -147,15 +146,17 @@ Note that this action does not have its own view but is accessed via a button on
 
 **Products Controller**
 
-The controller actions in this controller generally mirror the normal CRUD actions that have been outlined in the routine controller above, so I will just highlight the differences for conciseness. 
+The actions in this controller generally mirror the normal CRUD actions that have been outlined in the routine controller above, so I will just highlight the differences for conciseness. 
 
 This controller has basic Create, Read, and Update functionality, with validations similar to those mentioned previously.  Two things worth noting:
 
 * There is no delete action for a product.  A product does not belong to any one user and can be used by many users and in many routines, so to me it did not make sense to allow a user to delete a product even if he created it. There is already a mechanism for removing a product from an individual routine, and I think that is sufficient. 
-* I thought long and hard about who would be able to edit any given product. It makes sense for the user who added the product to be able to edit it, since he might make a typo or want to add something, etc. However, it also makes sense for other users to be able to edit a product for the same reasons. Keeping all of this in mind, I built the product edit and patch actions to allow any logged-in user to edit any product. 
+* I thought long and hard about who would be able to edit any given product. It makes sense for the user who added the product to be able to edit it, since he might make a typo or want to add something, etc. However, it also makes sense for other users to be able to edit a product for the same reasons. Keeping all of this in mind, I built the product 'edit' and 'patch' actions to allow any logged-in user to edit any product. 
 
 This is not a perfect solution, and likely not the best solution for a site that actually has users! Not every user may agree on what is added to a product, although I suppose it’s a little like Wikipedia in that anyone can fix an issue. It also doesn’t prevent malicious users from creating an account and wreaking havoc on existing products, so that is a consideration. 
 
 What might be helpful to implement in the future is to enable a commenting system (which I would like to do anyway!) so that users can suggest changes to a particular product. In that event, either the user who added the routine or site admins/mods can update the product in the database. If I can implement that type of functionality, it would make sense to allow users to only update products they themselves have added. 
+
+That's my app! Check out my code!
 
 

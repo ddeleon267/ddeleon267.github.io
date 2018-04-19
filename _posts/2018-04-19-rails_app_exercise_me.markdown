@@ -5,7 +5,7 @@ date:       2018-04-19 08:16:35 -0400
 permalink:  rails_app_exercise_me
 ---
 
-For my third portfolio project (built in Rails!), I created a simple app for users to share and created workout routines and their associated exercises. You can check out my code [here](https://github.com/ddeleon267/exercise-me). 
+For my third portfolio project (built in Rails!), I created a simple app for users to share and created workout routines and their associated exercises. You can check out my code [here](https://github.com/ddeleon267/exercise-me). You can view a brief video walkthrough [here](https://youtu.be/VfKfWWL2moA).
 
 ## Models and Model Associations
 
